@@ -169,7 +169,9 @@
 	}
 }
 .user__box,
-.basket__box{
+.basket__box,
+.message__box,
+.notification__box{
 	position: relative;
 	height: 90px;
 	margin-top: 40px;
@@ -182,7 +184,7 @@
 		}
 	}
 }
-.basket__menu{
+.circle__menu{
 	position: absolute;
 	top: 63px;
 	right: -15px;
@@ -191,40 +193,62 @@
 	overflow: hidden;
 	transition: all .3s;
 }
-.basket__box{
+.basket__box,
+.message__box,
+.notification__box{
 	margin-top: 53px;
 	margin-left: 15px;
 	&:hover{
-		.basket__menu{
-			overflow: auto;
+		.header__circle::before{
+			color: $bg;
+		}
+		.circle__menu{
+			overflow: hidden;
 			height: auto;
+		}
+		.circle__item{
+			padding: 23px;
+			border-width: 1px;
 		}
 	}
 }
-.basket__item{
+.circle__item{
 	background-color: #fff;
-	border: 1px solid #e0e0e0;
+	border: 0 solid #e0e0e0;
 	border-top: none;
-	padding: 23px;
+	padding: 0 23px;
+	transition: all .3s;
 	display: flex;
 	align-items: center;
 	width: 269px;
+	position: relative;
+	&::before{
+		position: absolute;
+		top: 27px;
+		right: 28px;
+		color: #b0bec5;
+		font-size: 16px;
+	}
 }
-.basket__images{
+.circle__images{
 	margin-right: 15px;
 }
-.basket__info-name{
+.circle__info-name{
 	@include f500;
 	color: $bg;
 }
-.basket__info-thema{
+.circle__info-thema{
 	font-size: 12px;
 	color: $green;
 }
-.basket__info-price{
+.circle__info-price{
 	@include f500;
 	color: #000;
 	font-size: 16px;
+}
+.circle__info-date{
+	font-size: 10px;
+	color: #707070;
 }
 .basket__summ{
 	padding: 16px 17px 12px;
@@ -255,6 +279,22 @@
 	width: 122px;
 	margin-left: 6px;
 	background-color: $red;
+}
+.notification__menu,
+.message__menu{
+	.circle__images{
+		margin-right: 20px;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+	}
+	.circle__info{
+		line-height: 18px;
+		font-family: 'Roboto-Regular', sans-serif;
+	}
+}
+.icons-color::before{
+	color: $tomate;
 }
 
 
