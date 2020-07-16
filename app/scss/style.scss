@@ -192,6 +192,7 @@
 	height: 0;
 	overflow: hidden;
 	transition: all .3s;
+	z-index: 1;
 }
 .basket__box,
 .message__box,
@@ -295,6 +296,10 @@
 }
 .icons-color::before{
 	color: $tomate;
+}
+.header__btn-menu,
+.menu__btn{
+	display: none;
 }
 
 
