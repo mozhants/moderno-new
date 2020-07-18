@@ -309,6 +309,110 @@
 
 // end header
 
+
+// start modal
+#modal{
+	background-color: $green;
+	max-width: 730px;
+	width: 100%;
+	padding-top: 90px;
+	padding-bottom: 100px;
+}
+.login__title{
+	text-align: center;
+	font-size: 48px;
+	margin-bottom: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	@include f700;
+}
+.login__wrapper{
+	form{
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	label{
+		position: relative;
+		display: block;
+		width: 100%;
+		&::before{
+			position: absolute;
+			font-family: 'icomoon';
+			font-size: 14px;
+			color: #fff;
+			left: 18px;
+			top: 9px;
+		}
+	}
+	.login__label-name::before{
+		content: "\f007";
+	}
+	.login__label-pass::before{
+		content: "\f023";
+	}
+	input{
+		height: 43px;
+		margin-bottom: 8px;
+		border: none;
+		background-color: #76ae36;
+		color: #fff;
+		font-size: 14px;
+		padding-left: 40px;
+		display: block;
+		width: 100%;
+		outline: none;
+		&::placeholder{
+			color: #fff;
+			font-size: 14px;
+		}
+	}
+	button{
+		margin-top: 19px;
+		padding: 18px 0 16px;
+		background-color: #fff;
+		width: 140px;
+		text-transform: uppercase;
+		border: none;
+		margin-right: 10px;
+		cursor: pointer;
+		@include f700;
+		color: #000;
+		text-align: center;
+		box-shadow: 0 2px 2px 0 rgba(118, 174, 54, 0.75);
+		font-size: 18px;
+	}
+}
+.creat-acc{
+	margin-top: 19px;
+	padding: 16px 0 16px 28px;
+	text-align: center;
+	width: 245px;
+	background-color: #76ae36;
+	color: #fff;
+	font-size: 18px;
+	position: relative;
+	&::before{
+		content: "\f044";
+		position: absolute;
+		top: 15px;
+		left: 35px;
+		font-family: 'icomoon';
+	}
+}
+.lost-pass{
+	display: block;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 18px;
+}
+.fancybox-button svg path{
+	color: #fff;
+}
+
+
+// end modal
+
+
 // start search
 
 .search{
@@ -1289,10 +1393,6 @@ button.icon-unsorted{
 	color: #707070;
 	column-count: 3;
 	column-gap: 25px;
-// 	li{
-// 		max-width: 270px;
-// 		width: 100%;
-// 	}
 }
 
 
@@ -1344,6 +1444,137 @@ button.icon-unsorted{
 	color: $bg;
 	@include f700;
 }
+
+.price__box{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+.price__product{
+	font-size: 22px;
+	@include f500;
+	color: $red;
+}
+.product__price{
+	button{
+		margin-bottom: 7px;
+		box-shadow: 0 1px 2px 0 rgba(69, 90, 100, 0.75);
+		border: none;
+		background-color: $text;
+		color: #fff;
+		font-size: 16px;
+		font-family: 'Roboto-Regular', sans-serif !important;
+		font-weight: 700;
+		text-align: center;
+		display: block;
+		padding: 17px 5px 15px;
+		width: 100%;
+		cursor: pointer;
+		&::before{
+			font-weight: 400;
+			font-family: 'icomoon';
+			padding-right: 8px;
+		}
+	}
+	.icon-shopping-cart{
+		background-color: $green;
+	}
+	.icon-heart-o{
+		background-color: #42a5f5;
+	}
+}
+.product-author__box{
+	padding: 25px 0;
+	display: flex;
+}
+.author__avatar{
+	margin-right: 14px;
+}
+.author__name{
+	font-size: 18px;
+	color: $bg;
+	margin-bottom: 11px;
+}
+.author__info-link{
+	color: #707070;
+	padding: 1px 9px;
+	border: 1px solid #d3d3d3;
+}
+.author__awards-list{
+	li{
+		display: inline-block;
+		color: #fff;
+		font-size: 20px;
+		position: relative;
+		text-align: center;
+		&::before{
+			position: absolute;
+			top: 6px;
+			left: 0;
+			right: 0;
+		}
+	}
+	& + li{
+		margin-left: 8px;
+	}
+	.icon-meh-o{
+		background-image: url(../images/awards/awards-1.png);
+		width: 34px;
+		height: 37px;		
+	}
+	.icon-pagelines{
+		background-image: url(../images/awards/awards-2.png);
+		width: 34px;
+		height: 37px;
+	}
+	.icon-bolt{
+		background-image: url(../images/awards/awards-3.png);
+		width: 34px;
+		height: 37px;
+	}
+	.icon-foursquare{
+		background-image: url(../images/awards/awards-4.png);
+		width: 34px;
+		height: 37px;
+	}
+	.icon-cny{
+		background-image: url(../images/awards/awards-5.png);
+		width: 34px;
+		height: 37px;
+	}
+}
+.aside__item-sales{
+	padding-top: 23px;
+	font-size: 16px;
+	@include f300;
+	color: #707070;
+	span{
+		font-size: 20px;
+		@include f700;
+		color: $bg;
+		padding-right: 13px;
+		&::before{
+			content: "\f07a";
+			color: #a6b5bb;
+			padding-right: 20px;
+			font-family: 'icomoon';
+		}
+	}
+}
+.aside__item.sales-number{
+	padding-bottom: 25px;
+}
+.information__line{
+	font-size: 14px;
+	color: #70838d;
+	margin-top: 20px;
+	line-height: 18px;
+	span{
+		color: $bg;
+		@include f500;
+	}
+}
+
 
 
 // end product-one
