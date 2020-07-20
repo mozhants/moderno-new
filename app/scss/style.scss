@@ -1863,6 +1863,7 @@ button.icon-unsorted{
 // start profile
 .profile__inner{
 	display: flex;
+	margin-bottom: 30px;
 }
 .profile__aside{
 	margin-right: 30px;
@@ -1932,8 +1933,254 @@ button.icon-unsorted{
 	padding: 16px 10px;
 	box-shadow: 0 1px 2px 0 rgba(69, 90, 100, 0.75);
 }
+.profile__banner{
+	padding: 20px;
+	border: 1px solid #dedede;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+.profile__banner-images{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: 332px;
+}
+.profile__items{
+	display: flex;
+	background-color: #fff;
+	border: 1px solid #dedede;
+}
+.profile__item{
+	width: 25%;
+	text-align: center;
+	padding: 20px 5px 17px;
+	& + .profile__item{
+		border-left: 1px solid #dedede;
+	}
+}
+.profile__item-title{
+	font-size: 14px;
+	color: $bg;
+	@include f500;
+}
+.profile__item-content{
+	font-size: 14px;
+	color: #707070;
+	&.profile__item-sales{
+		color: $bg;
+	}
+}
 
+.profile-box{
+	background-color: #fff;
+	padding: 35px 40px 25px;
+	border: 1px solid #dedede;
+}
+.profile-box__title{
+	margin-bottom: 25px;
+	@include f700;
+	color: $bg;
+	font-size: 20px;
+}
+.profile-box__text{
+	margin-bottom: 20px;
+	p{
+		color: #707070;
+	}
+}
+.profile-box__item-head{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	font-size: 16px;
+	color: $bg;
+}
+.profile-box__item-name{
+	@include f500;
+	font-style: italic;
+}
+.profile-box__item-number{
+	@include f700;
+}
+.profile-box__item-line{
+	height: 15px;
+	background-color: #f4f4f4;
+	border-radius: 3px;
+	margin-bottom: 23px;
+	span{
+		display: block;
+		height: 15px;
+		border-radius: 3px;
+		background-image: url(../images/skills.jpg);
+		background-repeat: repeat-x;
+	}
+}
+
+.profile__settings{
+	.product-one__tabs.settings__tabs{
+		.tabs span{
+				position: relative;
+				&.active{
+					&::before{
+						color: $green;
+					}
+				}
+				&::before{
+					font-family: 'icomoon';
+					position: absolute;
+					left: 24px;
+					color: #d0d0d0;
+					font-size: 14px;
+				}
+				
+		}
+	}
+}
+.profile-user::before{
+	content: "\f007";
+}
+.profile-suitcase::before{
+	content: "\f0f2";
+}
+.profile-envelope::before{
+	content: "\f003";
+}
+.profile-comments::before{
+	content: "\f0e6";
+}
+.profile-group::before{
+	content: "\f0c0";
+}
 // end profile
+
+
+// start upload
+
+.upload__inner{
+	background-color: #fff;
+	border: 1px solid #dedede;
+	margin-bottom: 110px;
+	button{
+		color: #fff;
+		background-color: $green;
+		border: none;
+		padding: 15px 36px;
+		margin-left: 175px;
+		cursor: pointer;
+	}
+}
+.upload__inner-title{
+	padding: 16px 35px 18px;
+	@include f500;
+	font-size: 24px;
+	color: $bg;
+	border-bottom: 1px solid #dedede;
+	margin-bottom: 40px;
+}
+.upload__inner-content{
+	margin-bottom: 30px;
+	padding-left: 45px;
+	padding-right: 50px;
+}
+.upload-line{
+	margin-bottom: 25px;
+	display: flex;
+	label{
+		min-width: 175px;
+		padding-right: 15px;
+		color: #444;
+		span{
+			color: $green;
+			font-size: 24px;
+		}
+	}
+	select,
+	input,
+	textarea{
+		width: 100%;
+		display: block;
+		border: 1px solid #dedede;
+		background-color: #f9f9f9;
+		outline: none;
+		height: 40px;
+		padding: 0 18px;
+		color: #707070;
+	}
+	textarea{
+		resize: none;
+		height: 150px;
+		padding: 8px 18px;
+	}
+	.jq-file__browse {
+		top: 5px;
+		right: auto;
+		left: 9px;
+		padding: 0 12px;
+		border: 1px solid #d7d7d7;
+		border-radius: 0;
+		background: #fff;
+		box-shadow: none;
+		text-shadow: none;
+		font-size: 12px;
+		line-height: 26px;
+		color: #444;
+	}
+	.jq-file {
+		width: 100%;
+		border-radius: 0;
+		box-shadow: none;
+		border: 1px solid #dedede;
+		background-color: #f9f9f9;
+		height: 40px;
+	}
+	.jq-file__name {
+		box-sizing: border-box;
+		width: 100%;
+		height: 40px;
+		margin-left: 100px;
+		outline: none;
+		border: none;
+		border-bottom-color: transparent;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		color: #707070;
+		font-size: 12px;
+		line-height: 40px;
+	}
+	.jq-selectbox{
+		width: 100%;
+	}
+	.jq-selectbox__select {
+		height: 40px;
+		padding: 0 18px;
+		border: 1px solid #dedede;
+		border-bottom-color: #dedede;
+		border-radius: 0;
+		background: #f9f9f9;;
+		box-shadow: none;
+		font-family: 'Roboto-Regular', sans-serif;
+		color: #707070;
+		text-shadow: none;
+		line-height: 39px;
+	}
+	.jq-selectbox__trigger-arrow{
+		border: none;
+		top: 0;
+		right: 20px;
+		&::before{
+			content: "\f0d7";
+			font-family: 'icomoon';
+			color: #444;
+			font-size: 15px;
+		}
+	}
+	.jq-selectbox__trigger{
+		border-left: none;
+	}
+}
+
+// end upload
 
 @import 'media';
 
